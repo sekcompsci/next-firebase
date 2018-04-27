@@ -1,13 +1,16 @@
 {
   "name": "next-firebase",
+  "version": "1.0.0",
+  "license": "ISC",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "5.1.0",
-    "react": "16.3.2",
-    "react-dom": "16.3.2"
+    "install": "yarn build-all",
+    "next": "yarn build-firebase && cd \"src/app\" && yarn && yarn dev",
+    "preserve": "yarn build-all",
+    "serve": "firebase serve",
+    "predeploy": "yarn build-all",
+    "deploy": "firebase deploy",
+    "build-all": "yarn build-next && yarn build-firebase",
+    "build-next": "cd \"src/app\" && yarn && yarn build",
+    "build-firebase": "cd \"src/functions\" && yarn"
   }
 }

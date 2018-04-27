@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "source": "src/functions"
+  },
+  "hosting": {
+    "public": "src/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
