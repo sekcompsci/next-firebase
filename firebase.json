@@ -4,6 +4,10 @@
   },
   "hosting": {
     "public": "src/public",
+    "rewrites": [{
+      "source": "**/**",
+      "function": "next"
+    }],
     "ignore": [
       "firebase.json",
       "**/.*",
